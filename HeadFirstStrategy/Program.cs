@@ -1,4 +1,5 @@
-﻿using HeadFirstStrategy.Ducks;
+﻿using HeadFirstStrategy.DuckImitator;
+using HeadFirstStrategy.Ducks;
 using HeadFirstStrategy.Fly;
 using System;
 
@@ -19,6 +20,16 @@ namespace MyApp // Note: actual namespace depends on the project name.
             modelDuck.SetFlyBehaivor(new FlyRocketPowered());
 
             modelDuck.PerformFly();
+
+            Console.WriteLine("____________________________");
+
+            Console.WriteLine();
+
+            DuckImitator duckImitator = new ClassicDuckImitator();
+            duckImitator.PerformQueack();
+
+
+            
         }
     }
 }
