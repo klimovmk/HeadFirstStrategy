@@ -8,17 +8,17 @@ using System.Threading.Tasks;
 
 namespace HeadFirstStrategy.Ducks
 {
-    public class MallardDuck : Duck
+    public class ModelDuck : Duck
     {
-        public MallardDuck() 
+        public ModelDuck()
         {
+            _flyBehavior = new FlyNoWay();
             _queckBehavior = new Queck();
-            _flyBehavior = new FlyWithWings();
-            
         }
+
         public override void Display()
         {
-            Console.WriteLine("MallardDuck Display");
+            Console.WriteLine("I'am Model Duck");
         }
     }
 }

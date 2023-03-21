@@ -32,5 +32,15 @@ namespace HeadFirstStrategy.Ducks
         {
             _flyBehavior.Fly();
         }
+
+        public void SetFlyBehaivor(IFlyBehavior flyBehavior)
+        {
+            _flyBehavior = flyBehavior;
+        }
+
+        public void SetQueckBehavior(IQueckBehavior queckBehavior)
+        {
+            _queckBehavior = queckBehavior;
+        }
     }
 }

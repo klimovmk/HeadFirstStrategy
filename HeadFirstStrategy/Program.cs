@@ -1,4 +1,5 @@
 ﻿using HeadFirstStrategy.Ducks;
+using HeadFirstStrategy.Fly;
 using System;
 
 namespace MyApp // Note: actual namespace depends on the project name.
@@ -10,6 +11,14 @@ namespace MyApp // Note: actual namespace depends on the project name.
            Duck duck = new MallardDuck();
            duck.PerformQueck();
             duck.PerformFly();
+
+            Duck modelDuck = new ModelDuck();
+
+            modelDuck.PerformFly();
+
+            modelDuck.SetFlyBehaivor(new FlyRocketPowered());
+
+            modelDuck.PerformFly();
         }
     }
 }
